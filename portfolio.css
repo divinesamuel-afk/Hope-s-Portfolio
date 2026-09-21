@@ -1,0 +1,239 @@
+:root{
+  --ink:#0E211F;
+  --ink-soft:#5A6764;
+  --teal:#12897F;
+  --teal-deep:#0B5F58;
+  --paper:#F6F3EA;
+  --paper-card:#FFFFFF;
+  --surface-alt:#ECE6D6;
+  --line:#DCD6C6;
+  --shadow:rgba(14,33,31,0.16);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#141F1D;
+    --paper-card:#1B2725;
+    --surface-alt:#0B1413;
+    --ink:#F2EFE6;
+    --ink-soft:#AEB8B4;
+    --teal:#5FD9CB;
+    --teal-deep:#3FB6A8;
+    --line:#2C3835;
+    --shadow:rgba(0,0,0,0.5);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#141F1D;
+  --paper-card:#1B2725;
+  --surface-alt:#0B1413;
+  --ink:#F2EFE6;
+  --ink-soft:#AEB8B4;
+  --teal:#5FD9CB;
+  --teal-deep:#3FB6A8;
+  --line:#2C3835;
+  --shadow:rgba(0,0,0,0.5);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'IBM Plex Sans', system-ui, sans-serif;
+  -webkit-font-smoothing:antialiased;
+  transition:background 0.2s ease, color 0.2s ease;
+}
+img{max-width:100%;display:block;}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px;}
+
+h1,h2,h3{font-family:'Fraunces', serif;font-weight:600;letter-spacing:-0.01em;margin:0;}
+
+/* ---------- Nav ---------- */
+.nav{
+  position:sticky;top:0;z-index:20;
+  background:var(--paper-card);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+  transition:background 0.2s ease, border-color 0.2s ease;
+}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;}
+.wordmark{
+  font-family:'Fraunces', serif;font-weight:600;font-size:20px;color:var(--ink);
+  display:flex;align-items:center;gap:8px;
+}
+.wordmark .dot{width:8px;height:8px;border-radius:50%;background:var(--teal);}
+.navlinks{display:flex;gap:28px;}
+.navlinks a{color:var(--ink-soft);text-decoration:none;font-size:14px;}
+.navlinks a:hover{color:var(--ink);}
+.theme-toggle{
+  width:36px;height:36px;border-radius:50%;
+  border:1px solid var(--line);background:transparent;color:var(--ink);
+  font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;
+  transition:background 0.15s ease;
+  margin-left:20px;
+}
+.theme-toggle:hover{background:var(--surface-alt);}
+
+/* ---------- Hero ---------- */
+.hero{
+  background:var(--surface-alt);
+  color:var(--ink);
+  padding:88px 0 0;
+  overflow:hidden;
+  transition:background 0.2s ease;
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.1fr 0.9fr;gap:48px;align-items:end;
+}
+.hero-eyebrow{
+  color:var(--teal);font-size:15px;margin-bottom:18px;
+}
+.hero h1{
+  font-size:clamp(38px,5.4vw,64px);
+  line-height:1.04;
+  color:var(--ink);
+}
+.hero p.lede{
+  font-size:18px;line-height:1.6;color:var(--ink-soft);max-width:52ch;margin-top:22px;
+}
+.hero-meta{
+  display:flex;gap:36px;margin-top:34px;padding-top:26px;border-top:1px solid var(--line);
+  flex-wrap:wrap;
+}
+.hero-meta div{font-size:14px;color:var(--ink-soft);}
+.hero-meta strong{display:block;color:var(--ink);font-size:15px;font-weight:500;margin-bottom:3px;font-family:'IBM Plex Sans';}
+.hero-phone{
+  position:relative;justify-self:end;padding-bottom:0;
+}
+.phone-frame{
+  width:230px;border-radius:28px;background:var(--ink);padding:8px;
+  box-shadow:0 30px 60px -20px var(--shadow);
+  transform:rotate(2.5deg);
+}
+.phone-frame img{border-radius:22px;}
+
+/* ---------- Section shells ---------- */
+section{padding:96px 0;}
+.section-dark{background:var(--surface-alt);color:var(--ink);transition:background 0.2s ease;}
+.section-dark .ink-soft{color:var(--ink-soft);}
+
+.kicker{
+  font-size:14px;color:var(--teal);font-weight:500;margin-bottom:14px;
+}
+h2.section-title{font-size:clamp(28px,3.6vw,38px);max-width:20ch;color:var(--ink);}
+.section-copy{font-size:17px;line-height:1.65;color:var(--ink-soft);max-width:60ch;margin-top:16px;}
+
+/* ---------- Overview ---------- */
+.overview-grid{
+  display:grid;grid-template-columns:1.3fr 1fr;gap:64px;margin-top:44px;
+}
+.fact-list{list-style:none;margin:0;padding:0;}
+.fact-list li{
+  padding:16px 0;border-top:1px solid var(--line);
+  font-size:15px;color:var(--ink-soft);
+}
+.fact-list li:last-child{border-bottom:1px solid var(--line);}
+.fact-list strong{display:block;color:var(--ink);font-family:'IBM Plex Sans';font-weight:600;font-size:15px;margin-bottom:2px;}
+
+/* ---------- Filmstrip ---------- */
+.filmstrip{
+  display:flex;gap:22px;overflow-x:auto;margin-top:48px;padding-bottom:20px;
+  scrollbar-width:thin;
+}
+.filmstrip::-webkit-scrollbar{height:6px;}
+.filmstrip::-webkit-scrollbar-thumb{background:var(--line);border-radius:4px;}
+.film-item{flex:0 0 auto;width:198px;}
+.film-phone{
+  border-radius:22px;background:var(--ink);padding:7px;
+  box-shadow:0 16px 34px -14px var(--shadow);
+}
+.film-phone img{border-radius:17px;
+display:flex;}
+.film-num{font-family:'Fraunces',serif;font-size:14px;color:var(--teal);margin-bottom:10px;}
+.film-caption{font-size:14px;line-height:1.5;color:var(--ink-soft);margin-top:12px;max-width:26ch;}
+.film-caption b{color:var(--ink);font-weight:600;}
+
+/* ---------- Browser frames (admin) ---------- */
+.browser-stack{display:flex;flex-direction:column;gap:40px;margin-top:48px;}
+.browser-frame{
+  border-radius:14px;overflow:hidden;border:1px solid var(--line);
+  box-shadow:0 20px 44px -24px var(--shadow);
+  background:var(--paper-card);
+}
+.browser-chrome{
+  height:34px;background:var(--surface-alt);display:flex;align-items:center;gap:6px;padding:0 14px;
+}
+.browser-chrome span{width:9px;height:9px;border-radius:50%;background:var(--line);}
+.browser-body img{width:100%;display:block;}
+.browser-row{display:grid;grid-template-columns:1fr 1.4fr;gap:36px;align-items:center;}
+.browser-row h3{font-size:20px;margin-bottom:10px;}
+.browser-row p{font-size:15px;line-height:1.6;color:var(--ink-soft);}
+.browser-row.reverse .browser-text{order:2;}
+
+/* ---------- Console snapshot strip ---------- */
+.snap{
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  padding:40px 0;
+}
+.snap-note{font-size:14px;color:var(--ink-soft);max-width:56ch;margin-bottom:30px;}
+.snap-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:0;}
+.snap-item{
+  padding:18px 20px;border-left:1px solid var(--line);
+}
+.snap-item:first-child{border-left:none;}
+.snap-num{font-family:'Fraunces',serif;font-size:34px;color:var(--teal);}
+.snap-label{font-size:13px;color:var(--ink-soft);margin-top:4px;}
+
+/* ---------- Footer ---------- */
+.footer{
+  background:var(--surface-alt);color:var(--ink);padding:88px 0 48px;
+  transition:background 0.2s ease;
+}
+.footer h2{font-size:clamp(30px,4vw,44px);color:var(--ink);max-width:16ch;}
+.footer-grid{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-top:36px;flex-wrap:wrap;}
+.footer-contact{font-size:15px;line-height:2;color:var(--ink-soft);}
+.footer-contact a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--teal);}
+.footer-bottom{
+  margin-top:70px;padding-top:24px;border-top:1px solid var(--line);
+  display:flex;justify-content:space-between;font-size:13px;color:var(--ink-soft);flex-wrap:wrap;gap:8px;
+}
+
+/* ==========================================================
+   RESPONSIVE — TABLET
+   Applies to screens 860px and narrower (tablets, small
+   laptops in split view). Mainly collapses two-column
+   layouts down to a single column.
+   ========================================================== */
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:1fr;}
+  .hero-phone{justify-self:start;margin-top:36px;}
+  .overview-grid{grid-template-columns:1fr;gap:36px;}
+  .browser-row{grid-template-columns:1fr;}
+  .browser-row.reverse .browser-text{order:0;}
+  .snap-grid{grid-template-columns:repeat(3,1fr);}
+  .snap-item:nth-child(3n+1){border-left:none;}
+  .snap-item:nth-child(-n+3){border-top:none;}
+}
+
+/* ==========================================================
+   RESPONSIVE — PHONE
+   Applies to screens 640px and narrower. Tightens spacing,
+   hides the inline nav links (logo + toggle only), and
+   drops grids down to a single or double column so nothing
+   is cramped on a small screen.
+   ========================================================== */
+@media (max-width:640px){
+  .wrap{padding:0 20px;}
+  section{padding:64px 0;}
+  .navlinks{display:none;}
+  .hero{padding-top:64px;}
+  .hero h1{font-size:clamp(32px,9vw,44px);}
+  .phone-frame{width:190px;}
+  .film-item{width:168px;}
+  .snap-grid{grid-template-columns:repeat(2,1fr);}
+  .snap-item:nth-child(3n+1){border-left:1px solid var(--line);}
+  .snap-item:nth-child(odd){border-left:none;}
+  .snap-item:nth-child(-n+2){border-top:none;}
+  .footer-grid{flex-direction:column;align-items:flex-start;gap:24px;}
+  .footer-grid > *:last-child{text-align:left !important;}
+}
