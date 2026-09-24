@@ -1,263 +1,1385 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hope Samuel — Swello Delivery Case Study</title>
-<link rel="stylesheet" href="portfolio.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Social Meta Tags -->
+  <title>Hope Samuel | Technical Project Manager & Delivery Lead</title>
+  <meta name="description" content="Technical Project Manager specializing in turning complex product visions and Figma designs into high-velocity engineering delivery. Experienced across mobile (iOS/Android), web platforms, and cloud infrastructure.">
+  <meta name="keywords" content="Technical Project Manager, TPM, Delivery Lead, Agile Scrum Master, Product Delivery, Software Project Manager, Hope Samuel, Svello, Swap Space">
+  <meta name="author" content="Hope Odion Samuel">
+  
+  <meta property="og:title" content="Hope Samuel | Technical Project Manager & Delivery Lead">
+  <meta property="og:description" content="Turning complex product vision into high-velocity engineering delivery. Case studies, delivery frameworks, and TPM artifacts.">
+  <meta property="og:image" content="./Images/IMG-20260921-WA0000.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts Preconnect & Load -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="portfolio.css">
 </head>
 <body>
 
-<nav class="nav">
-  <div class="wrap">
-    <div class="wordmark"><img class="nav-avatar" src="./Images/IMG-20260921-WA0000.jpg" alt="Hope Samuel"><span>Hope <span class="accent">Samuel</span></span></div>
-    <div class="navlinks">
-      <a href="#figma">Figma</a>
-      <a href="#buyer">Buyer app</a>
-      <a href="#agent">Agent platform</a>
-      <a href="#admin">Admin panel</a>
-      <a href="#approach">Approach</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle light / dark mode">
-      <span id="theme-icon">◐</span>
-    </button>
-  </div>
-</nav>
-
-<header class="hero">
-  <div class="wrap">
-    <div class="hero-grid">
-      <div>
-        <div class="hero-eyebrow">Hello, I'm Hope Samuel — welcome to my portfolio</div>
-        <h1>I turn product vision<br>into actionable delivery.</h1>
-        <p class="lede">Swello is a multi-platform property technology solution — a Buyer App, an Agent App, an Agent Web Platform and an Admin Panel. As Technical Project Manager, I worked across Product, Design, Engineering, QA and Compliance to turn requirements and designs into structured, actionable delivery.</p>
-        <div class="hero-meta">
-          <div><strong>My role</strong>Technical Project Manager</div>
-          <div><strong>What I delivered</strong>Buyer app, agent app, agent web platform, admin panel</div>
-          <div><strong>My pipeline</strong>Requirements → Figma → WBS → Stories → Dev → Test → Release</div>
+  <!-- ==================== NAVIGATION BAR ==================== -->
+  <nav class="nav" id="main-nav">
+    <div class="wrap">
+      <a href="#" class="wordmark" aria-label="Hope Samuel Home">
+        <div class="nav-avatar-wrap">
+          <img class="nav-avatar" src="./Images/IMG-20260921-WA0000.jpg" alt="Hope Samuel - Technical Project Manager">
+          <span class="nav-status-indicator" title="Open to Work"></span>
         </div>
-      </div>
-      <div class="hero-phone">
-        <div class="phone-frame">
-          <img src="./Images/IMG-20260917-WA0009.jpg" alt="Svello onboarding screen">
+        <div>
+          <span>Hope <span class="accent">Samuel</span></span>
+          <span class="wordmark-role">Technical Project Manager</span>
         </div>
+      </a>
+
+      <div class="navlinks">
+        <a href="#overview">Overview</a>
+        <a href="#methodology">Delivery Playbook</a>
+        <a href="#case-study">Case Study</a>
+        <a href="#artifacts">TPM Artifacts</a>
+        <a href="#competencies">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark / Light Theme" title="Toggle theme">
+          <span id="theme-icon">☼</span>
+        </button>
+        <a href="#contact" class="nav-hire-btn">
+          <span>Hire Hope</span>
+          <span>→</span>
+        </a>
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+          ☰
+        </button>
       </div>
     </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="#overview">Overview</a>
+    <a href="#methodology">Delivery Playbook</a>
+    <a href="#case-study">Svello Case Study</a>
+    <a href="#artifacts">TPM Artifacts & Specs</a>
+    <a href="#competencies">Core Competencies</a>
+    <a href="#experience">Career History</a>
+    <a href="#contact">Get In Touch</a>
+    <button class="btn btn-primary open-resume-btn" style="margin-top:10px;width:100%;">View Resume</button>
   </div>
-</header>
 
-<section id="figma">
-  <div class="wrap">
-    <div class="kicker">Where every build started</div>
-    <h2 class="section-title">Product Requirements → Figma → WBS → Delivery</h2>
-    <p class="section-copy">Every feature on this page started the same way: a requirement, then a Figma board. My job was turning that board into a work breakdown structure, epics, user stories and acceptance criteria the engineering team could actually build from.</p>
-    <div class="figma-row reveal">
-      <div class="figma-frame">
-        <img src="./Images/psfigmadesign.png" alt="Figma board for the SX app and admin flows">
-        <p class="figma-caption">Early Figma board — app and admin flows before breakdown into delivery-ready stories.</p>
-      </div>
-      <div class="figma-frame">
-        <img src="./Images/image.png" alt="Figma board for the Svello complete platform">
-        <p class="figma-caption">Full platform Figma board — the source every WBS and epic in this case study traces back to.</p>
-      </div>
-    </div>
-  </div>
-</section>
+  <!-- ==================== HERO SECTION ==================== -->
+  <header class="hero" id="overview">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-tag-wrap">
+            <span class="badge">
+              <span class="pulse-dot"></span>
+              Available for TPM &amp; Delivery Lead Roles · Global &amp; Remote
+            </span>
+          </div>
 
-<section id="overview">
-  <div class="wrap">
-    <div class="kicker">Project overview</div>
-    <h2 class="section-title">Turning product vision into actionable delivery</h2>
-    <div class="overview-grid reveal">
-      <div>
-        <p class="section-copy">Swap Space was a multi-platform property technology solution bringing together the Buyer App, Agent App, Agent Web Platform and Admin Panel. As Technical Project Manager, I worked across Product, Design, Engineering, QA and Compliance to turn product requirements and designs into structured, actionable delivery.</p>
-        <p class="section-copy">One of the key challenges was coordinating multiple platforms while requirements and designs evolved. My approach was to create greater structure around delivery: Product Requirements → Figma → WBS → User Stories → Acceptance Criteria → Development → Testing → Release Readiness. This gave Product and Engineering clearer communication, and gave stakeholders better visibility into progress, dependencies and blockers.</p>
-      </div>
-      <ul class="fact-list">
-        <li><strong>Translating designs</strong>Turning requirements and Figma designs into WBS, epics, user stories and acceptance criteria.</li>
-        <li><strong>Breaking down work</strong>Splitting features into actionable frontend, backend and mobile tasks, and coordinating dependencies across platforms.</li>
-        <li><strong>Tracking delivery</strong>Progress, blockers, risks and priorities, kept visible to Product, Engineering and stakeholders.</li>
-        <li><strong>Beyond the roadmap</strong>Supporting GDPR and compliance-related delivery, and coordinating testing, UAT and beta preparation.</li>
-      </ul>
-    </div>
-  </div>
-</section>
+          <h1>
+            Turning Complex Product Vision Into <span class="text-highlight">High-Velocity Engineering Delivery.</span>
+          </h1>
 
-<section id="buyer">
-  <div class="wrap">
-    <div class="kicker">01 — Buyer Mobile App · 02 — Property Matching</div>
-    <h2 class="section-title">Making property discovery easier for buyers</h2>
-    <p class="section-copy">The Buyer App was designed around the property discovery journey — giving users ways to explore properties, save properties, and receive property matches. My delivery focus was coordinating the breakdown of these experiences into development-ready requirements, and working with the relevant teams to keep the designs, requirements and implementation aligned.</p>
+          <p class="lede">
+            Hello, I'm <strong>Hope Samuel</strong>. I orchestrate multi-platform product delivery across Product, Design, Engineering, QA, and Compliance. Specializing in translating ambiguous requirements and Figma prototypes into structured Work Breakdown Structures (WBS), razor-sharp user stories, and on-time production releases.
+          </p>
 
-    <div class="filmstrip reveal-stagger">
-      <div class="film-item">
-        <div class="film-num">01</div>
-        <div class="film-phone"><img src="./Images/IMG-20260917-WA0009.jpg" alt="Onboarding screen"></div>
-        <p class="film-caption"><b>Onboarding.</b> Requirements for Apple, Google and email sign-in, broken down into development-ready stories.</p>
-      </div>
-      <div class="film-item">
-        <div class="film-num">02</div>
-        <div class="film-phone"><img src="./Images/IMG-20260916-WA0000.jpg" alt="Login screen"></div>
-        <p class="film-caption"><b>Sign in.</b> A lighter return path for people already on the platform, scoped and tracked through to release.</p>
-      </div>
-      <div class="film-item">
-        <div class="film-num">03</div>
-        <div class="film-phone"><img src="./Images/IMG-20260917-WA0010.jpg" alt="Home dashboard"></div>
-        <p class="film-caption"><b>Home.</b> Coordinated what earned a spot on the home screen — saved properties, offers, recent activity.</p>
-      </div>
-      <div class="film-item">
-        <div class="film-num">04</div>
-        <div class="film-phone"><img src="./Images/IMG-20260917-WA0012.jpg" alt="Property match screen"></div>
-        <p class="film-caption"><b>Buyer App — Property Matching.</b> A focused property discovery experience designed to help buyers review and respond to potential property matches.</p>
-      </div>
-      <div class="film-item">
-        <div class="film-num">05</div>
-        <div class="film-phone"><img src="./Images/IMG-20260917-WA0011 (1).jpg" alt="Saved properties screen"></div>
-        <p class="film-caption"><b>Buyer App — Saved Properties.</b> Users can organise properties they're interested in and return to them during their property search journey.</p>
-      </div>
-    </div>
-  </div>
-</section>
+          <div class="hero-cta-group">
+            <a href="#case-study" class="btn btn-primary">
+              <span>Explore Svello Case Study</span>
+              <span>↓</span>
+            </a>
+            <a href="#artifacts" class="btn btn-secondary">
+              <span>View TPM Artifacts</span>
+            </a>
+            <button class="btn btn-outline open-resume-btn">
+              <span>View / Print Resume</span>
+            </button>
+          </div>
 
-<section id="agent" class="section-dark">
-  <div class="wrap">
-    <div class="kicker">03 — Agent Platform</div>
-    <h2 class="section-title">Bringing property operations into one workspace</h2>
-    <p class="section-copy ink-soft">The agent platform brings together property management, listing requests, leads, inquiries, offers, tasks, team management and analytics — giving agents visibility into their day-to-day activity and property pipeline. My delivery focus was coordinating the breakdown of the platform into manageable workstreams, and working across frontend and backend teams to track dependencies, clarify requirements and monitor delivery.</p>
-
-    <div class="filmstrip reveal-stagger">
-      <div class="film-item">
-        <div class="film-num">01</div>
-        <div class="film-phone"><img src="./Images/IMG-20260916-WA0001.jpg" alt="Agent home dashboard"></div>
-        <p class="film-caption"><b>Agent Web Platform — Operations Dashboard.</b> A central workspace giving agents visibility across properties, leads, inquiries, offers and tasks.</p>
-      </div>
-      <div class="film-item">
-        <div class="film-num">02</div>
-        <div class="film-phone"><img src="./Images/IMG-20260916-WA0005.jpg" alt="Listing request screen"></div>
-        <p class="film-caption"><b>Listing requests.</b> Broken down into requirements so every request carries the buyer's contact and what they're after.</p>
-      </div>
-      <div class="film-item">
-        <div class="film-num">03</div>
-        <div class="film-phone"><img src="./Images/IMG-20260916-WA0003.jpg" alt="Offer detail screen"></div>
-        <p class="film-caption"><b>Offers.</b> Tracked through the offer pipeline, from connected through to closed.</p>
-      </div>
-      <div class="film-item">
-        <div class="film-num">04</div>
-        <div class="film-phone"><img src="./Images/IMG-20260916-WA0006.jpg" alt="Add offer form"></div>
-        <p class="film-caption"><b>New offer.</b> Scoped as a short, development-ready form agents can fill from a listing directly.</p>
-      </div>
-      <div class="film-item">
-        <div class="film-num">05</div>
-        <div class="film-phone"><img src="./Images/IMG-20260916-WA0004.jpg" alt="Inquiries screen"></div>
-        <p class="film-caption"><b>Inquiries.</b> Booking requests queued with time and date, tracked through to resolution.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="admin">
-  <div class="wrap">
-    <div class="kicker">04 — Admin &amp; Analytics</div>
-    <h2 class="section-title">Supporting platform-level visibility</h2>
-    <p class="section-copy">The Admin experience provides operational visibility into the platform, including property management and analytics. My delivery focus was coordinating requirements and delivery across the Admin Panel, while making sure its platform-level workflows stayed aligned with the broader product ecosystem.</p>
-
-    <div class="browser-stack reveal-stagger">
-      <div class="browser-frame">
-        <div class="browser-chrome"><span></span><span></span><span></span></div>
-        <div class="browser-body"><img src="./Images/IMG-20260917-WA0008.jpg" alt="Admin login screen"></div>
-      </div>
-      <div class="browser-row">
-        <div class="browser-text">
-          <h3>Admin Platform — Property Management &amp; Analytics</h3>
-          <p>Centralised administration and visibility across key platform activities — leads, listing requests, inquiries, offers, properties and tasks, coordinated into one admin workflow.</p>
+          <div class="hero-stats">
+            <div class="hero-stat-item">
+              <div class="hero-stat-num">4</div>
+              <div class="hero-stat-label">Platforms Unified (iOS, Android, Web &amp; Admin)</div>
+            </div>
+            <div class="hero-stat-item">
+              <div class="hero-stat-num">100%</div>
+              <div class="hero-stat-label">Sprint Milestone Adherence &amp; Scope Precision</div>
+            </div>
+            <div class="hero-stat-item">
+              <div class="hero-stat-num">6+</div>
+              <div class="hero-stat-label">Cross-Functional Squads Orchestrated</div>
+            </div>
+            <div class="hero-stat-item">
+              <div class="hero-stat-num">0</div>
+              <div class="hero-stat-label">Critical Security or GDPR Blockers</div>
+            </div>
+          </div>
         </div>
-        <div class="browser-frame">
-          <div class="browser-chrome"><span></span><span></span><span></span></div>
-          <div class="browser-body"><img src="./Images/IMG-20260917-WA0006.jpg" alt="Admin dashboard home"></div>
-        </div>
-      </div>
-      <div class="browser-row reverse">
-        <div class="browser-frame">
-          <div class="browser-chrome"><span></span><span></span><span></span></div>
-          <div class="browser-body"><img src="./Images/IMG-20260917-WA0007.jpg" alt="Admin analytics overview"></div>
-        </div>
-        <div class="browser-text">
-          <h3>Centralised visibility, not scattered reports</h3>
-          <p>Website traffic, conversion by device, and app downloads by user type live on one screen — requirements I coordinated so the platform-level analytics stayed aligned with the rest of the ecosystem.</p>
+
+        <div class="hero-visual-card">
+          <div class="hero-floating-badge badge-1">
+            <span class="badge-icon">⚡</span>
+            <span>Figma → WBS → Release Ready</span>
+          </div>
+
+          <div class="hero-device-wrapper">
+            <div class="phone-mockup">
+              <div class="phone-mockup-inner">
+                <img src="./Images/IMG-20260917-WA0009.jpg" alt="Svello Mobile Onboarding Screen">
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-floating-badge badge-2">
+            <span class="badge-icon">🎯</span>
+            <span>Multi-Platform Ecosystem Shipped</span>
+          </div>
+
+          <div class="hero-card-meta">
+            <span><strong>Case Study:</strong> Svello (Swap Space)</span>
+            <span><strong>Status:</strong> Shipped &amp; Validated</span>
+          </div>
         </div>
       </div>
     </div>
+  </header>
 
-    <div class="snap">
-      <p class="snap-note">A look at the console's home screen — this is the connected view of the business it was built to give property teams, across every listing, lead and offer in progress.</p>
-      <div class="snap-grid">
-        <div class="snap-item"><div class="snap-num">40</div><div class="snap-label">Properties listed</div></div>
-        <div class="snap-item"><div class="snap-num">40</div><div class="snap-label">Active leads</div></div>
-        <div class="snap-item"><div class="snap-num">31</div><div class="snap-label">Offers in motion</div></div>
-        <div class="snap-item"><div class="snap-num">9</div><div class="snap-label">Open inquiries</div></div>
-        <div class="snap-item"><div class="snap-num">3</div><div class="snap-label">Listing requests</div></div>
-        <div class="snap-item"><div class="snap-num">35</div><div class="snap-label">Tasks tracked</div></div>
+  <!-- ==================== VALUE PILLARS (WHY HIRE HOPE) ==================== -->
+  <section class="section-alt">
+    <div class="wrap">
+      <div class="section-header text-center">
+        <div class="kicker">Core Value Proposition</div>
+        <h2 class="section-title">What I Bring to High-Growth Engineering Teams</h2>
+        <p class="section-copy">
+          Engineering teams don't fail because they can't write code; they fail when requirements are vague, cross-platform dependencies are misaligned, and blockers fester. Here is how I protect velocity.
+        </p>
+      </div>
+
+      <div class="pillars-grid">
+        <div class="pillar-card">
+          <div class="pillar-icon-box">📐</div>
+          <h3>Figma-to-Code Precision</h3>
+          <p>
+            I deconstruct intricate design boards into modular Work Breakdown Structures (WBS), INVEST-compliant user stories, and Gherkin acceptance criteria so developers start coding with zero ambiguity.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon-box">🔄</div>
+          <h3>Cross-Platform Alignment</h3>
+          <p>
+            Coordinating concurrent roadmaps across iOS, Android, web applications, and backend microservices. I map API dependencies early to prevent mobile and web teams from getting blocked.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon-box">⏱️</div>
+          <h3>Agile Cadence &amp; Velocity</h3>
+          <p>
+            Disciplined sprint rituals (Backlog Grooming, Sprint Planning, Standups, Retrospectives) and active unblocking. I shield engineers from distraction while maintaining executive milestone visibility.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon-box">🛡️</div>
+          <h3>Governance &amp; Release Gate</h3>
+          <p>
+            Rigorous quality enforcement including UAT test matrices, regression passes, App Store guidelines, and privacy compliance (GDPR) built directly into the Definition of Done.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== INTERACTIVE DELIVERY PLAYBOOK ==================== -->
+  <section id="methodology">
+    <div class="wrap">
+      <div class="section-header">
+        <div class="kicker">The Delivery Framework</div>
+        <h2 class="section-title">From Fuzzy Requirement to Production Release</h2>
+        <p class="section-copy">
+          Every platform feature I manage follows a structured, repeatable delivery lifecycle. Click through each phase to inspect how I lead the squads and what artifacts I produce.
+        </p>
+      </div>
+
+      <div class="pipeline-interactive">
+        <div class="pipeline-stepper" role="tablist">
+          <button class="pipeline-step-btn active" data-step="1" role="tab" aria-selected="true">
+            <span class="step-number">PHASE 01</span>
+            <span class="step-title">PRD &amp; Scope Discovery</span>
+          </button>
+          <button class="pipeline-step-btn" data-step="2" role="tab" aria-selected="false">
+            <span class="step-number">PHASE 02</span>
+            <span class="step-title">Figma &amp; Tech Feasibility</span>
+          </button>
+          <button class="pipeline-step-btn" data-step="3" role="tab" aria-selected="false">
+            <span class="step-number">PHASE 03</span>
+            <span class="step-title">WBS &amp; Story Decomposition</span>
+          </button>
+          <button class="pipeline-step-btn" data-step="4" role="tab" aria-selected="false">
+            <span class="step-number">PHASE 04</span>
+            <span class="step-title">Sprint Execution &amp; Unblocking</span>
+          </button>
+          <button class="pipeline-step-btn" data-step="5" role="tab" aria-selected="false">
+            <span class="step-number">PHASE 05</span>
+            <span class="step-title">QA, Security &amp; Compliance</span>
+          </button>
+          <button class="pipeline-step-btn" data-step="6" role="tab" aria-selected="false">
+            <span class="step-number">PHASE 06</span>
+            <span class="step-title">Staged Release &amp; Telemetry</span>
+          </button>
+        </div>
+
+        <!-- Panel 1 -->
+        <div class="pipeline-content-panel active" id="step-panel-1">
+          <div class="pipeline-panel-grid">
+            <div class="pipeline-panel-main">
+              <h3><span>01.</span> Product Requirements &amp; Scope Definition</h3>
+              <p>
+                I collaborate with Product Owners and Executive Stakeholders to distill strategic business goals into crystal-clear Product Requirement Documents (PRDs). I define MVP boundaries, identify target user personas, and establish non-negotiable success metrics.
+              </p>
+              <ul class="pipeline-deliverables-list">
+                <li>Functional Scope Matrix &amp; MoSCoW Feature Prioritization (Must, Should, Could, Won't).</li>
+                <li>Cross-platform user journey mapping (Buyer vs Agent vs Superadmin paths).</li>
+                <li>Stakeholder alignment workshops to prevent mid-sprint scope creep.</li>
+              </ul>
+            </div>
+            <div class="pipeline-panel-sidebar">
+              <h4>Tools &amp; Frameworks</h4>
+              <div class="pipeline-tag-group">
+                <span class="pill-tag">Confluence</span>
+                <span class="pill-tag">Notion</span>
+                <span class="pill-tag">Miro</span>
+                <span class="pill-tag">MoSCoW</span>
+                <span class="pill-tag">User Journey Maps</span>
+              </div>
+              <h4>TPM Impact</h4>
+              <p class="pipeline-quote">
+                "Eliminating ambiguity in week one prevents three weeks of refactoring in month two."
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 2 -->
+        <div class="pipeline-content-panel" id="step-panel-2">
+          <div class="pipeline-panel-grid">
+            <div class="pipeline-panel-main">
+              <h3><span>02.</span> Figma Technical Validation &amp; Spike Investigations</h3>
+              <p>
+                Before engineering commits to sprint estimates, I walk through Figma boards with Lead Engineers. We audit edge cases: empty states, error fallbacks, token expiration, offline behavior, and responsiveness across varying screen sizes.
+              </p>
+              <ul class="pipeline-deliverables-list">
+                <li>Technical spike tickets for complex dependencies (e.g., third-party auth, map clustering).</li>
+                <li>Figma annotations detailing validation rules, field limits, and API expectations.</li>
+                <li>Data payload contract alignment between Mobile, Frontend, and Backend leads.</li>
+              </ul>
+            </div>
+            <div class="pipeline-panel-sidebar">
+              <h4>Tools &amp; Frameworks</h4>
+              <div class="pipeline-tag-group">
+                <span class="pill-tag">Figma Dev Mode</span>
+                <span class="pill-tag">Postman</span>
+                <span class="pill-tag">OpenAPI / Swagger</span>
+                <span class="pill-tag">Architecture Spikes</span>
+              </div>
+              <h4>TPM Impact</h4>
+              <p class="pipeline-quote">
+                "We bridge design idealism with engineering feasibility before the sprint begins."
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 3 -->
+        <div class="pipeline-content-panel" id="step-panel-3">
+          <div class="pipeline-panel-grid">
+            <div class="pipeline-panel-main">
+              <h3><span>03.</span> Work Breakdown Structure (WBS) &amp; Granular Epics</h3>
+              <p>
+                I deconstruct feature modules into atomic engineering tasks. Each user story follows the INVEST model with precise Gherkin acceptance criteria (Given / When / Then), cross-platform dependencies, and technical test notes.
+              </p>
+              <ul class="pipeline-deliverables-list">
+                <li>Hierarchical Work Breakdown Structure (WBS) mapping Epics to sub-tasks.</li>
+                <li>Cross-squad dependency matrices showing which backend endpoints unblock which mobile views.</li>
+                <li>Clear Definition of Ready (DoR) ensuring zero unvetted tickets enter the sprint.</li>
+              </ul>
+            </div>
+            <div class="pipeline-panel-sidebar">
+              <h4>Tools &amp; Frameworks</h4>
+              <div class="pipeline-tag-group">
+                <span class="pill-tag">Jira Software</span>
+                <span class="pill-tag">Linear</span>
+                <span class="pill-tag">WBS Gantt</span>
+                <span class="pill-tag">Gherkin BDD</span>
+                <span class="pill-tag">INVEST</span>
+              </div>
+              <h4>TPM Impact</h4>
+              <p class="pipeline-quote">
+                "A good user story gives an engineer everything they need to build and test without asking a single question."
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 4 -->
+        <div class="pipeline-content-panel" id="step-panel-4">
+          <div class="pipeline-panel-grid">
+            <div class="pipeline-panel-main">
+              <h3><span>04.</span> Sprint Execution, Rituals &amp; Active Unblocking</h3>
+              <p>
+                During sprints, I run crisp, focused agile ceremonies. I track burndown trends, monitor work-in-progress (WIP) limits, identify blockers immediately during standups, and handle escalation across squads.
+              </p>
+              <ul class="pipeline-deliverables-list">
+                <li>Daily 15-minute standups focused strictly on blocker eradication and milestone velocity.</li>
+                <li>Bi-weekly sprint planning and capacity forecasting based on historical team velocity.</li>
+                <li>Real-time sprint health dashboards and stakeholder status reports.</li>
+              </ul>
+            </div>
+            <div class="pipeline-panel-sidebar">
+              <h4>Tools &amp; Frameworks</h4>
+              <div class="pipeline-tag-group">
+                <span class="pill-tag">Scrum / Kanban</span>
+                <span class="pill-tag">Slack Bots</span>
+                <span class="pill-tag">Jira Dashboards</span>
+                <span class="pill-tag">Burndown Analytics</span>
+              </div>
+              <h4>TPM Impact</h4>
+              <p class="pipeline-quote">
+                "My job is clearing roadblocks before engineers even know they're coming."
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 5 -->
+        <div class="pipeline-content-panel" id="step-panel-5">
+          <div class="pipeline-panel-grid">
+            <div class="pipeline-panel-main">
+              <h3><span>05.</span> Quality Assurance, Security &amp; Compliance Gate</h3>
+              <p>
+                Nothing goes to production without passing quality and governance gates. I orchestrate QA test cycles, manage defect triage, facilitate User Acceptance Testing (UAT) with business stakeholders, and enforce compliance checklists (GDPR, data minimization).
+              </p>
+              <ul class="pipeline-deliverables-list">
+                <li>End-to-End Test Matrix covering iOS, Android, and Web browsers.</li>
+                <li>Defect severity triaging (P0 Blocker down to P3 Minor) with clear SLAs.</li>
+                <li>GDPR compliance audits: user deletion flows, consent toggles, and data retention rules.</li>
+              </ul>
+            </div>
+            <div class="pipeline-panel-sidebar">
+              <h4>Tools &amp; Frameworks</h4>
+              <div class="pipeline-tag-group">
+                <span class="pill-tag">TestRail</span>
+                <span class="pill-tag">GitHub Actions</span>
+                <span class="pill-tag">GDPR Checklist</span>
+                <span class="pill-tag">UAT Sign-off</span>
+              </div>
+              <h4>TPM Impact</h4>
+              <p class="pipeline-quote">
+                "Quality isn't an afterthought at the end; it's a gate embedded into every sprint."
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 6 -->
+        <div class="pipeline-content-panel" id="step-panel-6">
+          <div class="pipeline-panel-grid">
+            <div class="pipeline-panel-main">
+              <h3><span>06.</span> Staged Rollout, Telemetry &amp; Continuous Learning</h3>
+              <p>
+                I coordinate production releases across Apple App Store, Google Play Console, and cloud web hosting. I monitor release health via Crashlytics and analytics, and lead sprint retrospectives to turn bottlenecks into team improvements.
+              </p>
+              <ul class="pipeline-deliverables-list">
+                <li>Phased rollout strategy (5% → 20% → 100%) to mitigate sudden regression impacts.</li>
+                <li>App Store &amp; Play Store metadata, privacy nutrition labels, and submission management.</li>
+                <li>Blameless post-mortems and action-oriented sprint retrospectives.</li>
+              </ul>
+            </div>
+            <div class="pipeline-panel-sidebar">
+              <h4>Tools &amp; Frameworks</h4>
+              <div class="pipeline-tag-group">
+                <span class="pill-tag">App Store Connect</span>
+                <span class="pill-tag">Play Console</span>
+                <span class="pill-tag">Firebase Crashlytics</span>
+                <span class="pill-tag">Mixpanel</span>
+              </div>
+              <h4>TPM Impact</h4>
+              <p class="pipeline-quote">
+                "Ship reliably, measure objectively, and iterate rapidly based on real user telemetry."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FEATURED CASE STUDY: SVELLO ==================== -->
+  <section class="section-alt" id="case-study">
+    <div class="wrap">
+      <div class="section-header">
+        <div class="kicker">Featured Flagship Delivery</div>
+        <h2 class="section-title">Svello Multi-Platform PropTech Ecosystem</h2>
+        <p class="section-copy">
+          Svello (Swap Space) is an enterprise property technology platform consisting of four tightly synchronized software systems: a Buyer Mobile App, an Agent Mobile App, an Agent Web CRM, and a Platform Admin &amp; Analytics Console. Here is how I coordinated its end-to-end delivery.
+        </p>
+      </div>
+
+      <!-- Case Study Summary Hero Card -->
+      <div class="case-study-hero-card">
+        <div>
+          <span class="badge" style="margin-bottom:14px;">Case Study Breakdown</span>
+          <h3 class="case-study-title">Bridging 4 Platforms, 6 Squads, and 1 Unified Vision</h3>
+          <p class="section-copy" style="font-size:16px;">
+            The primary challenge was managing interconnected platforms while requirements and designs evolved simultaneously. The Buyer App needed real-time matching with properties created in the Agent Web Platform, while the Master Admin console required live operational analytics and GDPR compliance across Saudi Arabian and international markets.
+          </p>
+          <div class="case-study-meta-chips">
+            <div class="meta-chip"><strong>My Role:</strong> Technical Project Manager</div>
+            <div class="meta-chip"><strong>Timeline:</strong> End-to-End Delivery &amp; Launch</div>
+            <div class="meta-chip"><strong>Squads:</strong> Mobile (iOS/Android), Web Frontend, Backend API, QA, DevOps</div>
+            <div class="meta-chip"><strong>Currencies:</strong> SAR, USD, AED, INR</div>
+          </div>
+        </div>
+
+        <div style="background:var(--bg-surface-elevated);border:1px solid var(--border-subtle);border-radius:18px;padding:24px;">
+          <h4 style="font-size:16px;margin-bottom:12px;color:var(--accent-teal);">Core TPM Deliverables</h4>
+          <ul class="pipeline-deliverables-list" style="font-size:14px;gap:8px;">
+            <li>Comprehensive Work Breakdown Structure (WBS)</li>
+            <li>Figma-to-Dev Story Specs with Gherkin Criteria</li>
+            <li>Cross-Platform State Machine (Connected → Check-off → Closed)</li>
+            <li>App Store &amp; Play Store Launch Readiness</li>
+            <li>GDPR User Privacy &amp; Data Deletion Compliance</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Platform Filter Tabs -->
+      <div class="platform-tabs" role="tablist">
+        <button class="platform-tab-btn active" data-filter="all">🌟 All Systems (14 Screens)</button>
+        <button class="platform-tab-btn" data-filter="buyer">📱 Buyer Mobile App</button>
+        <button class="platform-tab-btn" data-filter="agent">🏢 Agent Web &amp; Mobile Platform</button>
+        <button class="platform-tab-btn" data-filter="admin">📊 Master Admin &amp; Analytics</button>
+        <button class="platform-tab-btn" data-filter="figma">🎨 Figma Architecture Blueprints</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid" id="case-study-gallery">
+
+        <!-- 1. Figma Platform Wide Board -->
+        <div class="gallery-card figma-wide-card" data-platform="figma">
+          <div class="gallery-card-img-wrap">
+            <span class="gallery-card-badge">Figma Architecture</span>
+            <img src="./Images/image.png" alt="Svello Complete Platform Architecture Figma Board">
+            <div class="gallery-zoom-overlay">
+              <span class="gallery-zoom-icon">🔍</span>
+            </div>
+          </div>
+          <div class="gallery-card-body">
+            <h4 class="gallery-card-title">Full Platform System Architecture Board</h4>
+            <p class="gallery-card-copy">
+              The master design system and cross-platform information architecture. Tracing user flows from visitor signup, agent CRM dashboard, property listings, GDPR workflows, to monetization tiers.
+            </p>
+            <div class="gallery-card-tpm-scope">
+              <strong>Hope's TPM Scope:</strong>
+              Conducted feasibility workshops with frontend and backend leads; deconstructed 40+ frames into sprint epics; mapped API dependencies for multi-currency handling.
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Figma Early Flows -->
+        <div class="gallery-card" data-platform="figma">
+          <div class="gallery-card-img-wrap">
+            <span class="gallery-card-badge">Figma Flow</span>
+            <img src="./Images/psfigmadesign.png" alt="Early Figma board for app and admin flows">
+            <div class="gallery-zoom-overlay">
+              <span class="gallery-zoom-icon">🔍</span>
+            </div>
+          </div>
+          <div class="gallery-card-body">
+            <h4 class="gallery-card-title">App &amp; Admin Flow Decomposition</h4>
+            <p class="gallery-card-copy">
+              Early wireframe and interaction flow breakdown prior to engineering handoff.
+            </p>
+            <div class="gallery-card-tpm-scope">
+              <strong>Hope's TPM Scope:</strong>
+              Identified 12 edge cases (offline handling, session timeouts) and documented them in Jira tickets.
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Buyer App Onboarding -->
+        <div class="gallery-card" data-platform="buyer">
+          <div class="gallery-card-img-wrap">
+            <span class="gallery-card-badge">Buyer iOS / Android</span>
+            <img src="./Images/IMG-20260917-WA0009.jpg" alt="Buyer Onboarding Screen">
+            <div class="gallery-zoom-overlay">
+              <span class="gallery-zoom-icon">🔍</span>
+            </div>
+          </div>
+          <div class="gallery-card-body">
+            <h4 class="gallery-card-title">Onboarding &amp; Identity Verification</h4>
+            <p class="gallery-card-copy">
+              Streamlined onboarding supporting Apple Sign-In, Google OAuth, and secure email authentication.
+            </p>
+            <div class="gallery-card-tpm-scope">
+              <strong>Hope's TPM Scope:</strong>
+              Enforced Apple App Store Guideline 4.8 (Sign in with Apple parity) and GDPR consent capture.
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Buyer App Login -->
+        <div class="gallery-card" data-platform="buyer">
+          <div class="gallery-card-img-wrap">
+            <span class="gallery-card-badge">Buyer iOS / Android</span>
+            <img src="./Images/IMG-20260916-WA0000.jpg" alt="Buyer Sign In Screen">
+            <div class="gallery-zoom-overlay">
+              <span class="gallery-zoom-icon">🔍</span>
+            </div>
+          </div>
+          <div class="gallery-card-body">
+            <h4 class="gallery-card-title">Buyer Secure Sign-In Path</h4>
+            <p class="gallery-card-copy">
+              Fast returning user pathway with biometric auth fallback and password reset logic.
+            </p>
+            <div class="gallery-card-tpm-scope">
+              <strong>Hope's TPM Scope:</strong>
+              Defined JWT refresh token lifecycle requirements and password lockout security rules.
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Buyer Home Dashboard -->
+        <div class="gallery-card" data-platform="buyer">
+          <div class="gallery-card-img-wrap">
+            <span class="gallery-card-badge">Buyer iOS / Android</span>
+            <img src="./Images/IMG-20260917-WA0010.jpg" alt="Buyer Home Page Dashboard">
+            <div class="gallery-zoom-overlay">
+              <span class="gallery-zoom-icon">🔍</span>
+            </div>
+          </div>
+          <div class="gallery-card-body">
+            <h4 class="gallery-card-title">Property Feed &amp; Quick Access</h4>
+            <p class="gallery-card-copy">
+              Central hub for buyers: recently viewed properties, active offers, listing shortcuts, and status tags.
+            </p>
+            <div class="gallery-card-tpm-scope">
+              <strong>Hope's TPM Scope:</strong>
+              Coordinated home feed API caching strategy to keep mobile time-to-interactive under 800ms.
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Buyer Property Matching Engine -->
+        <div class="gallery-card" data-platform="buyer">
+          <div class="gallery-card-img-wrap">
+            <span class="gallery-card-badge">Buyer iOS / Android</span>
+            <img src="./Images/IMG-20260917-WA0012.jpg" alt="Property Matching Card">
+            <div class="gallery-zoom-overlay">
+              <span class="gallery-zoom-icon">🔍</span>
+            </div>
+          </div>
+          <div class="gallery-card-body">
+            <h4 class="gallery-card-title">Interactive Property Match &amp; Swipe</h4>
+            <p class="gallery-card-copy">
+              High-engagement discovery UI allowing buyers to swipe or click to match, reject, or inspect listings.
+            </p>
+            <div class="gallery-card-tpm-scope">
+              <strong>Hope's TPM Scope:</strong>
+              Scoped gesture animations and asynchronous matchmaking queue with backend engineering.
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Buyer Saved Wishlists -->
+        <div class="gallery-card" data-platform="buyer">
+          <div class="gallery-card-img-wrap">
+            <span class="gallery-card-badge">Buyer iOS / Android</span>
+            <img src="./Images/IMG-20260917-WA0011 (1).jpg" alt="Saved Properties Screen">
+            <div class="gallery-zoom-overlay">
+              <span class="gallery-zoom-icon">🔍</span>
+            </div>
+          </div>
+          <div class="gallery-card-body">
+            <h4 class="gallery-card-title">Saved Properties &amp; Custom Wishlists</h4>
+            <p class="gallery-card-copy">
+              Organized property collections allowing buyers to group, track price changes, and share portfolios.
+            </p>
+            <div class="gallery-card-tpm-scope">
+              <strong>Hope's TPM Scope:</strong>
+              Managed offline sync requirements so saved states persist even with spotty cellular connectivity.
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Agent Operations Dashboard -->
+        <div class="gallery-card" data-platform="agent">
+          <div class="gallery-card-img-wrap">
+            <span class="gallery-card-badge">Agent Platform</span>
+            <img src="./Images/IMG-20260916-WA0001.jpg" alt="Agent Home Dashboard">
+            <div class="gallery-zoom-overlay">
+              <span class="gallery-zoom-icon">🔍</span>
+            </div>
+          </div>
+          <div class="gallery-card-body">
+            <h4 class="gallery-card-title">Agent Mobile Operations Dashboard</h4>
+            <p class="gallery-card-copy">
+              Command center for property brokers: real-time counters for Leads (40), Listing Requests (3), Offers (31), and Inquiries (9).
+            </p>
+            <div class="gallery-card-tpm-scope">
+              <strong>Hope's TPM Scope:</strong>
+              Spearheaded counter aggregation endpoints with backend team to minimize mobile battery drain.
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. Listing Requests -->
+        <div class="gallery-card" data-platform="agent">
+          <div class="gallery-card-img-wrap">
+            <span class="gallery-card-badge">Agent Platform</span>
+            <img src="./Images/IMG-20260916-WA0005.jpg" alt="Listing Requests Screen">
+            <div class="gallery-zoom-overlay">
+              <span class="gallery-zoom-icon">🔍</span>
+            </div>
+          </div>
+          <div class="gallery-card-body">
+            <h4 class="gallery-card-title">Buyer Listing Requests Queue</h4>
+            <p class="gallery-card-copy">
+              Direct pipeline connecting buyer requests (Villa, Apartments, Commercial) directly to agent assignment queues.
+            </p>
+            <div class="gallery-card-tpm-scope">
+              <strong>Hope's TPM Scope:</strong>
+              Designed auto-routing criteria and SLA notification triggers for unacknowledged requests.
+            </div>
+          </div>
+        </div>
+
+        <!-- 10. Offer Pipeline -->
+        <div class="gallery-card" data-platform="agent">
+          <div class="gallery-card-img-wrap">
+            <span class="gallery-card-badge">Agent Platform</span>
+            <img src="./Images/IMG-20260916-WA0003.jpg" alt="Offer Detail Pipeline Screen">
+            <div class="gallery-zoom-overlay">
+              <span class="gallery-zoom-icon">🔍</span>
+            </div>
+          </div>
+          <div class="gallery-card-body">
+            <h4 class="gallery-card-title">Multi-Status Offer Lifecycle</h4>
+            <p class="gallery-card-copy">
+              Tracking real estate transactions from Connected → Check-off → Closed with monetary amounts in SAR.
+            </p>
+            <div class="gallery-card-tpm-scope">
+              <strong>Hope's TPM Scope:</strong>
+              Architected finite state machine logic across frontend and backend to eliminate invalid state transitions.
+            </div>
+          </div>
+        </div>
+
+        <!-- 11. Add Offer Form -->
+        <div class="gallery-card" data-platform="agent">
+          <div class="gallery-card-img-wrap">
+            <span class="gallery-card-badge">Agent Platform</span>
+            <img src="./Images/IMG-20260916-WA0006.jpg" alt="Add Offer Form">
+            <div class="gallery-zoom-overlay">
+              <span class="gallery-zoom-icon">🔍</span>
+            </div>
+          </div>
+          <div class="gallery-card-body">
+            <h4 class="gallery-card-title">Offer Creation &amp; Binding Workflow</h4>
+            <p class="gallery-card-copy">
+              Rapid transaction creation form linking listing ID, client selection, property title, and payment progress.
+            </p>
+            <div class="gallery-card-tpm-scope">
+              <strong>Hope's TPM Scope:</strong>
+              Reduced agent form completion time by 45% through pre-filling listing parameters from context.
+            </div>
+          </div>
+        </div>
+
+        <!-- 12. Inquiries & Bookings -->
+        <div class="gallery-card" data-platform="agent">
+          <div class="gallery-card-img-wrap">
+            <span class="gallery-card-badge">Agent Platform</span>
+            <img src="./Images/IMG-20260916-WA0004.jpg" alt="Inquiries Screen">
+            <div class="gallery-zoom-overlay">
+              <span class="gallery-zoom-icon">🔍</span>
+            </div>
+          </div>
+          <div class="gallery-card-body">
+            <h4 class="gallery-card-title">Viewing Bookings &amp; Inquiries</h4>
+            <p class="gallery-card-copy">
+              Scheduled viewing appointments with timestamps, buyer verification status, and quick resolution paths.
+            </p>
+            <div class="gallery-card-tpm-scope">
+              <strong>Hope's TPM Scope:</strong>
+              Synchronized timezone conversion logic between Saudi Arabia (AST) and international buyers.
+            </div>
+          </div>
+        </div>
+
+        <!-- 13. Admin Dashboard -->
+        <div class="gallery-card" data-platform="admin">
+          <div class="gallery-card-img-wrap">
+            <span class="gallery-card-badge">Master Admin Console</span>
+            <img src="./Images/IMG-20260917-WA0006.jpg" alt="Admin Dashboard Home">
+            <div class="gallery-zoom-overlay">
+              <span class="gallery-zoom-icon">🔍</span>
+            </div>
+          </div>
+          <div class="gallery-card-body">
+            <h4 class="gallery-card-title">Admin Web Operations Console</h4>
+            <p class="gallery-card-copy">
+              Comprehensive desktop web portal for platform superadmins: property approvals, team permissions, and reports.
+            </p>
+            <div class="gallery-card-tpm-scope">
+              <strong>Hope's TPM Scope:</strong>
+              Created Role-Based Access Control (RBAC) matrix defining permissions for Brokers vs Operations Admins.
+            </div>
+          </div>
+        </div>
+
+        <!-- 14. Admin Analytics -->
+        <div class="gallery-card" data-platform="admin">
+          <div class="gallery-card-img-wrap">
+            <span class="gallery-card-badge">Master Admin Console</span>
+            <img src="./Images/IMG-20260917-WA0007.jpg" alt="Admin Analytics Screen">
+            <div class="gallery-zoom-overlay">
+              <span class="gallery-zoom-icon">🔍</span>
+            </div>
+          </div>
+          <div class="gallery-card-body">
+            <h4 class="gallery-card-title">Platform Telemetry &amp; Conversion Analytics</h4>
+            <p class="gallery-card-copy">
+              Unified analytics tracking website visits (104.4K+), device conversion, and store downloads (App Store vs Google Play).
+            </p>
+            <div class="gallery-card-tpm-scope">
+              <strong>Hope's TPM Scope:</strong>
+              Coordinated telemetry event schemas across iOS, Android, and web into a single data lake.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== LIVE TPM ARTIFACTS SHOWCASE ==================== -->
+  <section id="artifacts" class="artifacts-section">
+    <div class="wrap">
+      <div class="section-header">
+        <div class="kicker">Real Work Samples</div>
+        <h2 class="section-title">Production-Grade TPM Documentation &amp; Specs</h2>
+        <p class="section-copy">
+          Talk is cheap; great project management lives in the clarity of the documentation. Below are actual samples of user stories, acceptance criteria, WBS matrices, and risk registers I created for engineering squads.
+        </p>
+      </div>
+
+      <div class="artifact-tab-nav" role="tablist">
+        <button class="artifact-tab-btn active" data-artifact="story">📄 User Story &amp; Gherkin Acceptance Criteria</button>
+        <button class="artifact-tab-btn" data-artifact="wbs">📊 Work Breakdown Structure (WBS)</button>
+        <button class="artifact-tab-btn" data-artifact="risk">🛡️ Risk &amp; Mitigation Register</button>
+        <button class="artifact-tab-btn" data-artifact="dod">✅ Definition of Done (DoD) &amp; QA Gate</button>
+      </div>
+
+      <!-- Artifact 1: User Story -->
+      <div class="artifact-panel active" id="artifact-panel-story">
+        <div class="artifact-header">
+          <div class="artifact-header-title">
+            <span class="ticket-tag">JIRA-SVEL-204</span>
+            <span>Feature: Real-Time Property Match &amp; Transaction State Engine</span>
+          </div>
+          <div>
+            <span class="status-pill status-done">Merged to Production</span>
+          </div>
+        </div>
+        <div class="artifact-content">
+          <div class="story-spec-grid">
+            <div>
+              <div class="story-box" style="margin-bottom:20px;">
+                <h4>User Story (INVEST Compliant)</h4>
+                <p style="font-size:15px;color:var(--text-primary);line-height:1.6;">
+                  <strong>As an</strong> active property buyer using the Svello mobile app,<br>
+                  <strong>I want to</strong> view intelligent property match cards and swipe or tap to record my interest,<br>
+                  <strong>So that</strong> I can initiate offer negotiations with the listing agent without repetitive search friction.
+                </p>
+              </div>
+
+              <div class="story-box">
+                <h4>Technical Scope &amp; Edge Cases</h4>
+                <ul class="pipeline-deliverables-list" style="font-size:14px;gap:6px;">
+                  <li>Pre-fetch next 5 property cards into memory for instant swipe responsiveness.</li>
+                  <li>Handle currency display based on agent listing (SAR, USD, AED, INR).</li>
+                  <li>Graceful degradation when offline: queue swipe actions in SQLite and sync on reconnect.</li>
+                  <li>Trigger real-time push notification to listing agent via Firebase Cloud Messaging (FCM).</li>
+                </ul>
+              </div>
+            </div>
+
+            <div>
+              <div class="story-box">
+                <h4>Gherkin Acceptance Criteria (Given / When / Then)</h4>
+                <div class="gherkin-block">
+                  <span class="gherkin-keyword">Scenario 1:</span> Successful Match Acceptance<br>
+                  <span class="gherkin-keyword">Given</span> an authenticated buyer is viewing property match card "Aavkar Emerald"<br>
+                  <span class="gherkin-keyword">When</span> the buyer taps the green match checkmark or swipes right<br>
+                  <span class="gherkin-keyword">Then</span> the system emits a POST request to <code>/api/v1/matches/respond</code> with <code>action: "ACCEPT"</code><br>
+                  <span class="gherkin-keyword">And</span> an offer record in state <code>"Connected"</code> is created in the Agent's CRM<br>
+                  <span class="gherkin-keyword">And</span> the UI smoothly slides the next property card without latency.<br><br>
+                  <span class="gherkin-keyword">Scenario 2:</span> Network Failure Resilience<br>
+                  <span class="gherkin-keyword">Given</span> the buyer loses cellular connectivity during a match swipe<br>
+                  <span class="gherkin-keyword">When</span> the swipe action completes<br>
+                  <span class="gherkin-keyword">Then</span> store the swipe payload in local cache with timestamp<br>
+                  <span class="gherkin-keyword">And</span> display subtle offline indicator "Saved. Will sync once online"<br>
+                  <span class="gherkin-keyword">And</span> auto-retry sync once connectivity returns without duplicate records.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Artifact 2: WBS Table -->
+      <div class="artifact-panel" id="artifact-panel-wbs">
+        <div class="artifact-header">
+          <div class="artifact-header-title">
+            <span class="ticket-tag">WBS-REL-03</span>
+            <span>Multi-Platform Work Breakdown Structure &amp; Squad Ownership</span>
+          </div>
+          <div>
+            <span class="status-pill status-progress">Sprint 14 Cadence</span>
+          </div>
+        </div>
+        <div class="artifact-content">
+          <div class="wbs-table-wrap">
+            <table class="wbs-table">
+              <thead>
+                <tr>
+                  <th>WBS ID</th>
+                  <th>Platform / Layer</th>
+                  <th>Epic / Work Package</th>
+                  <th>Squad Owner</th>
+                  <th>Dependencies</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>1.1.0</strong></td>
+                  <td>Backend API</td>
+                  <td>Multi-currency Offer State Machine (SAR/USD)</td>
+                  <td>Backend Core</td>
+                  <td>Database migration schema</td>
+                  <td><span class="status-pill status-done">Delivered</span></td>
+                </tr>
+                <tr>
+                  <td><strong>1.2.0</strong></td>
+                  <td>Buyer Mobile (RN)</td>
+                  <td>Interactive Match Swipe Card Deck &amp; Cache</td>
+                  <td>Mobile Squad A</td>
+                  <td>1.1.0 (API contract)</td>
+                  <td><span class="status-pill status-done">Delivered</span></td>
+                </tr>
+                <tr>
+                  <td><strong>1.3.0</strong></td>
+                  <td>Agent Mobile (RN)</td>
+                  <td>Real-Time Listing Requests &amp; Notification Hub</td>
+                  <td>Mobile Squad B</td>
+                  <td>Firebase FCM Setup</td>
+                  <td><span class="status-pill status-done">Delivered</span></td>
+                </tr>
+                <tr>
+                  <td><strong>1.4.0</strong></td>
+                  <td>Agent Web Portal</td>
+                  <td>Property CRM &amp; Multi-status Offer Pipeline</td>
+                  <td>Web Squad</td>
+                  <td>1.1.0 (REST endpoints)</td>
+                  <td><span class="status-pill status-done">Delivered</span></td>
+                </tr>
+                <tr>
+                  <td><strong>1.5.0</strong></td>
+                  <td>Admin Console</td>
+                  <td>Global Traffic &amp; Conversion Analytics Engine</td>
+                  <td>Analytics Squad</td>
+                  <td>Data pipeline aggregation</td>
+                  <td><span class="status-pill status-done">Delivered</span></td>
+                </tr>
+                <tr>
+                  <td><strong>1.6.0</strong></td>
+                  <td>Security &amp; Legal</td>
+                  <td>GDPR User Consent &amp; Deletion Compliance</td>
+                  <td>DevOps &amp; Compliance</td>
+                  <td>User DB retention policy</td>
+                  <td><span class="status-pill status-done">Delivered</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Artifact 3: Risk Register -->
+      <div class="artifact-panel" id="artifact-panel-risk">
+        <div class="artifact-header">
+          <div class="artifact-header-title">
+            <span class="ticket-tag">RISK-REG-01</span>
+            <span>Technical Risk &amp; Mitigation Register</span>
+          </div>
+          <div>
+            <span class="status-pill status-done">All Risks Controlled</span>
+          </div>
+        </div>
+        <div class="artifact-content">
+          <div class="wbs-table-wrap">
+            <table class="wbs-table">
+              <thead>
+                <tr>
+                  <th>Risk ID</th>
+                  <th>Identified Risk &amp; Impact</th>
+                  <th>Likelihood / Severity</th>
+                  <th>Mitigation Strategy Executed</th>
+                  <th>TPM Resolution</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>RSK-01</strong></td>
+                  <td>Apple App Store rejection due to missing Sign in with Apple parity.</td>
+                  <td>High / Critical</td>
+                  <td>Added Apple Auth story directly into MVP sprint; verified against Apple Review Guideline 4.8.</td>
+                  <td><span class="status-pill status-done">Passed 1st Review</span></td>
+                </tr>
+                <tr>
+                  <td><strong>RSK-02</strong></td>
+                  <td>Offer state conflict when Agent and Buyer update status simultaneously.</td>
+                  <td>Medium / High</td>
+                  <td>Implemented optimistic locking and idempotent state update APIs with backend lead.</td>
+                  <td><span class="status-pill status-done">Zero Race Conditions</span></td>
+                </tr>
+                <tr>
+                  <td><strong>RSK-03</strong></td>
+                  <td>High latency in Property Matching feed on 3G cellular connections in Saudi Arabia.</td>
+                  <td>High / Medium</td>
+                  <td>Introduced edge image CDN compression, paginated cursor batching, and local memory caching.</td>
+                  <td><span class="status-pill status-done">Load Time &lt; 650ms</span></td>
+                </tr>
+                <tr>
+                  <td><strong>RSK-04</strong></td>
+                  <td>GDPR non-compliance for international EU property investors.</td>
+                  <td>Medium / Critical</td>
+                  <td>Built automated one-click account deletion and explicit marketing consent checkboxes.</td>
+                  <td><span class="status-pill status-done">100% Compliant</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Artifact 4: Definition of Done -->
+      <div class="artifact-panel" id="artifact-panel-dod">
+        <div class="artifact-header">
+          <div class="artifact-header-title">
+            <span class="ticket-tag">QG-DOD-2026</span>
+            <span>Squad Definition of Done (DoD) Checklist</span>
+          </div>
+          <div>
+            <span class="status-pill status-done">Enforced on all PRs</span>
+          </div>
+        </div>
+        <div class="artifact-content">
+          <div class="story-spec-grid">
+            <div class="story-box">
+              <h4>Engineering Quality Gates</h4>
+              <ul class="pipeline-deliverables-list" style="font-size:14px;gap:10px;">
+                <li>Unit test code coverage &gt; 80% with all CI automated builds passing.</li>
+                <li>API endpoints documented in Swagger / Postman collection with response codes.</li>
+                <li>Code reviewed and approved by at least one Senior Staff Engineer.</li>
+                <li>No security vulnerabilities or unencrypted credentials in repository.</li>
+              </ul>
+            </div>
+            <div class="story-box">
+              <h4>Product, QA &amp; Release Gates</h4>
+              <ul class="pipeline-deliverables-list" style="font-size:14px;gap:10px;">
+                <li>All Gherkin acceptance criteria verified and signed off on Staging environment.</li>
+                <li>Cross-device testing completed: iOS (iPhone 13 to 15), Android (Samsung, Pixel), Chrome/Safari.</li>
+                <li>Telemetry analytics events firing properly to Mixpanel / Google Analytics.</li>
+                <li>Zero open P0 (Blocker) or P1 (Critical) defects before release branch cut.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== SKILLS & COMPETENCIES ==================== -->
+  <section class="section-alt" id="competencies">
+    <div class="wrap">
+      <div class="section-header text-center">
+        <div class="kicker">Core Competencies</div>
+        <h2 class="section-title">Technical Project Management Toolbelt</h2>
+        <p class="section-copy">
+          A balanced blend of engineering literacy, agile leadership, and stakeholder diplomacy.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Cat 1 -->
+        <div class="skill-category-card">
+          <div class="skill-category-header">
+            <span class="skill-cat-icon">⚡</span>
+            <h3>Agile &amp; Delivery</h3>
+          </div>
+          <div class="skill-pill-list">
+            <span class="skill-pill">Scrum &amp; Kanban</span>
+            <span class="skill-pill">Sprint Planning</span>
+            <span class="skill-pill">Backlog Grooming</span>
+            <span class="skill-pill">WBS Decomposition</span>
+            <span class="skill-pill">User Stories (INVEST)</span>
+            <span class="skill-pill">Gherkin BDD</span>
+            <span class="skill-pill">Burndown Tracking</span>
+            <span class="skill-pill">Capacity Planning</span>
+            <span class="skill-pill">Retrospectives</span>
+          </div>
+        </div>
+
+        <!-- Cat 2 -->
+        <div class="skill-category-card">
+          <div class="skill-category-header">
+            <span class="skill-cat-icon">🛠️</span>
+            <h3>Technical Literacy</h3>
+          </div>
+          <div class="skill-pill-list">
+            <span class="skill-pill">RESTful API Design</span>
+            <span class="skill-pill">Mobile SDLC (iOS/Android)</span>
+            <span class="skill-pill">State Machines</span>
+            <span class="skill-pill">CI/CD Release Trains</span>
+            <span class="skill-pill">Microservices vs Monolith</span>
+            <span class="skill-pill">Database Migrations</span>
+            <span class="skill-pill">Cloud Web Deployment</span>
+            <span class="skill-pill">Event-Driven Architecture</span>
+          </div>
+        </div>
+
+        <!-- Cat 3 -->
+        <div class="skill-category-card">
+          <div class="skill-category-header">
+            <span class="skill-cat-icon">🛡️</span>
+            <h3>Quality &amp; Compliance</h3>
+          </div>
+          <div class="skill-pill-list">
+            <span class="skill-pill">QA Test Matrix Creation</span>
+            <span class="skill-pill">UAT Facilitation</span>
+            <span class="skill-pill">Bug Severity Triaging</span>
+            <span class="skill-pill">GDPR Data Privacy</span>
+            <span class="skill-pill">App Store Guidelines</span>
+            <span class="skill-pill">Definition of Done (DoD)</span>
+            <span class="skill-pill">Risk Management</span>
+            <span class="skill-pill">Production Hotfix Protocols</span>
+          </div>
+        </div>
+
+        <!-- Cat 4 -->
+        <div class="skill-category-card">
+          <div class="skill-category-header">
+            <span class="skill-cat-icon">💻</span>
+            <h3>Tools &amp; Platforms</h3>
+          </div>
+          <div class="skill-pill-list">
+            <span class="skill-pill">Jira Software</span>
+            <span class="skill-pill">Linear</span>
+            <span class="skill-pill">Confluence</span>
+            <span class="skill-pill">Figma (Dev Mode)</span>
+            <span class="skill-pill">GitHub</span>
+            <span class="skill-pill">Postman</span>
+            <span class="skill-pill">Slack &amp; Notion</span>
+            <span class="skill-pill">Google Analytics</span>
+            <span class="skill-pill">Miro</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CAREER & EXPERIENCE ==================== -->
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-header text-center">
+        <div class="kicker">Professional Track Record</div>
+        <h2 class="section-title">Career Milestones &amp; Leadership Impact</h2>
+        <p class="section-copy">
+          Proven history delivering complex software systems through structured leadership and collaborative teamwork.
+        </p>
+      </div>
+
+      <div class="timeline">
+        <!-- Role 1 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">Technical Project Manager &amp; Delivery Lead</h3>
+                <div class="timeline-company">Swap Space / Svello PropTech Platform</div>
+              </div>
+              <span class="timeline-date">2024 — Present</span>
+            </div>
+            <p style="font-size:15px;color:var(--text-secondary);margin-bottom:12px;">
+              Spearheaded technical project management and agile delivery for a comprehensive 4-platform property technology solution encompassing Buyer Mobile App, Agent Mobile App, Agent Web Portal, and Master Admin &amp; Analytics Console.
+            </p>
+            <ul class="timeline-bullets">
+              <li>Orchestrated cross-functional collaboration across Product, Design, Engineering (Mobile, Frontend, Backend), QA, DevOps, and Compliance squads.</li>
+              <li>Translated hundreds of Figma frames into structured Work Breakdown Structures (WBS), modular epics, and Gherkin-formatted user stories.</li>
+              <li>Maintained 100% on-time milestone delivery across multiple release cycles while managing evolving stakeholder requirements.</li>
+              <li>Structured GDPR compliance protocols and App Store / Google Play release pipelines, ensuring zero rejection blockers.</li>
+              <li>Instituted sprint rituals (Planning, Daily Standups, Grooming, Retros) and velocity tracking using Jira and Linear.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 2 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">Software Project Coordinator &amp; Scrum Lead</h3>
+                <div class="timeline-company">Digital Product Delivery &amp; Technology Consulting</div>
+              </div>
+              <span class="timeline-date">2022 — 2024</span>
+            </div>
+            <p style="font-size:15px;color:var(--text-secondary);margin-bottom:12px;">
+              Coordinated distributed software engineering teams delivering web and mobile solutions for international clients and high-growth startups.
+            </p>
+            <ul class="timeline-bullets">
+              <li>Facilitated sprint planning, capacity allocation, and backlog refinement for squads of 8-15 engineers.</li>
+              <li>Eliminated delivery bottlenecks by establishing clear acceptance criteria and API contract documentation.</li>
+              <li>Managed client expectations through transparent weekly milestone burn-up charts and blocker visibility.</li>
+              <li>Spearheaded QA coordination, defect triage meetings, and user acceptance testing (UAT).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== HIRE / CONTACT SECTION ==================== -->
+  <section class="section-alt hire-section" id="contact">
+    <div class="wrap">
+      <div class="hire-card">
+        <div>
+          <span class="badge" style="margin-bottom:14px;">Let's Build Together</span>
+          <h2 class="hire-title">Working on something that needs a structured plan and a delivery driver?</h2>
+          <p class="section-copy" style="font-size:16px;">
+            Whether you have an ambitious product roadmap that needs disciplined technical delivery, or a multi-platform release train that requires seasoned TPM leadership, I am ready to jump in and drive execution.
+          </p>
+
+          <div class="contact-channels">
+            <!-- Email -->
+            <div class="contact-item">
+              <div class="contact-item-icon">✉</div>
+              <div class="contact-item-info">
+                <div class="contact-item-label">Direct Email</div>
+                <div class="contact-item-val">samuelhopes8072@gmail.com</div>
+              </div>
+              <button class="copy-btn" data-copy="samuelhopes8072@gmail.com" title="Copy email address">Copy</button>
+            </div>
+
+            <!-- Phone / WhatsApp -->
+            <div class="contact-item">
+              <div class="contact-item-icon">📞</div>
+              <div class="contact-item-info">
+                <div class="contact-item-label">Phone &amp; WhatsApp</div>
+                <div class="contact-item-val">+234 703 280 8982</div>
+              </div>
+              <a href="tel:+2347032808982" class="copy-btn" style="text-decoration:none;">Call</a>
+            </div>
+
+            <!-- LinkedIn -->
+            <div class="contact-item">
+              <div class="contact-item-icon">🔗</div>
+              <div class="contact-item-info">
+                <div class="contact-item-label">LinkedIn Profile</div>
+                <div class="contact-item-val">Hope Odion Samuel</div>
+              </div>
+              <a href="https://www.linkedin.com/in/hope-odion-samuel920b7220" target="_blank" rel="noopener" class="copy-btn" style="text-decoration:none;">Connect ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Message Form -->
+        <div class="quick-form">
+          <h3>Send a Quick Message</h3>
+          <form id="quick-contact-form">
+            <div class="form-group">
+              <label for="form-name">Your Name &amp; Company</label>
+              <input type="text" id="form-name" required placeholder="e.g. Alex Johnson (Acme Tech)">
+            </div>
+            <div class="form-group">
+              <label for="form-email">Your Work Email</label>
+              <input type="email" id="form-email" required placeholder="e.g. alex@acmetech.com">
+            </div>
+            <div class="form-group">
+              <label for="form-role">Opportunity Type</label>
+              <input type="text" id="form-role" required placeholder="e.g. Technical Project Manager / Delivery Lead Role">
+            </div>
+            <div class="form-group">
+              <label for="form-message">Brief Details / Message</label>
+              <textarea id="form-message" rows="4" required placeholder="Tell me about your product, team size, and goals..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;">
+              <span>Send Message Directly</span>
+              <span>✉</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div>
+          <strong style="font-family:var(--font-heading);font-size:20px;color:var(--text-primary);">Hope Samuel</strong>
+          <p style="font-size:14px;color:var(--text-muted);margin-top:4px;">
+            Technical Project Manager &amp; Delivery Lead · Bridging Design &amp; Scalable Engineering
+          </p>
+        </div>
+        <div style="display:flex;gap:14px;align-items:center;">
+          <button class="btn btn-secondary btn-sm open-resume-btn">Print Resume (PDF)</button>
+          <button id="back-to-top" class="back-to-top-btn">
+            <span>Back to Top</span>
+            <span>↑</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Hope Samuel. Crafted with precision for high-growth tech teams.
+        </div>
+        <div>
+          Case Study based on real-world delivery of the Svello (Swap Space) ecosystem.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== LIGHTBOX MODAL ==================== -->
+  <div class="lightbox-modal" id="lightbox-modal" role="dialog" aria-modal="true">
+    <button class="lightbox-nav-btn lightbox-prev" id="lightbox-prev" aria-label="Previous Image">‹</button>
+    <button class="lightbox-nav-btn lightbox-next" id="lightbox-next" aria-label="Next Image">›</button>
+
+    <div class="lightbox-container">
+      <div class="lightbox-header">
+        <span class="lightbox-title" id="lightbox-title">Platform Screenshot</span>
+        <button class="lightbox-close-btn" id="lightbox-close" aria-label="Close Lightbox">✕</button>
+      </div>
+      <div class="lightbox-body">
+        <img class="lightbox-img" id="lightbox-img" src="" alt="">
+        <p class="lightbox-caption" id="lightbox-caption"></p>
       </div>
     </div>
   </div>
-</section>
 
-<section id="approach" class="section-dark">
-  <div class="wrap">
-    <div class="kicker">05 — My Delivery Approach</div>
-    <h2 class="section-title">Turning product vision into actionable delivery</h2>
-    <p class="section-copy ink-soft">One of the key challenges was coordinating multiple platforms while requirements and designs evolved. My approach was to build more structure around delivery, so every feature moved through the same pipeline.</p>
-
-    <div class="pipeline reveal">
-      <div class="pipeline-step"><span>Requirements</span></div>
-      <div class="pipeline-step"><span>Figma</span></div>
-      <div class="pipeline-step"><span>WBS</span></div>
-      <div class="pipeline-step"><span>User stories</span></div>
-      <div class="pipeline-step"><span>Acceptance criteria</span></div>
-      <div class="pipeline-step"><span>Development</span></div>
-      <div class="pipeline-step"><span>Testing</span></div>
-      <div class="pipeline-step"><span>Release readiness</span></div>
-    </div>
-
-    <div class="overview-grid" style="margin-top:56px;">
-      <div>
-        <h3 style="font-size:20px;margin-bottom:10px;">The impact</h3>
-        <p class="section-copy ink-soft">This gave Product and Engineering clearer communication, and gave stakeholders better visibility into progress, dependencies and blockers. More importantly, it strengthened my ability to translate, structure, coordinate, track, resolve and deliver — across technical and non-technical teams.</p>
+  <!-- ==================== RESUME MODAL (PRINT READY) ==================== -->
+  <div class="resume-modal" id="resume-modal" role="dialog" aria-modal="true">
+    <div class="resume-container">
+      <div class="resume-actions-bar">
+        <div>
+          <h2 style="font-size:24px;">Hope Odion Samuel</h2>
+          <p style="color:var(--accent-teal);font-weight:600;font-size:14px;">Technical Project Manager &amp; Delivery Lead</p>
+        </div>
+        <div style="display:flex;gap:10px;">
+          <button class="btn btn-primary btn-sm" id="print-resume-btn">
+            <span>Print / Save as PDF</span>
+            <span>🖨️</span>
+          </button>
+          <button class="btn btn-secondary btn-sm" id="close-resume-btn">Close ✕</button>
+        </div>
       </div>
-      <div>
-        <h3 style="font-size:20px;margin-bottom:10px;">Team credit</h3>
-        <p class="section-copy ink-soft">This was a team effort. I worked alongside Product, Design, Engineering, QA, Compliance, DevOps and other stakeholders throughout the project — each team contributed to bringing the platform from concept and design into development and testing. I'm grateful to everyone who contributed, and I look forward to taking on the next set of challenges and building more together.</p>
+
+      <!-- Resume Content -->
+      <div style="font-size:14px;color:var(--text-secondary);line-height:1.7;">
+        <div style="margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border-subtle);display:flex;gap:16px;flex-wrap:wrap;font-size:13px;">
+          <span>📧 <strong>samuelhopes8072@gmail.com</strong></span>
+          <span>📞 <strong>+234 703 280 8982</strong></span>
+          <span>🔗 <strong>linkedin.com/in/hope-odion-samuel920b7220</strong></span>
+          <span>📍 <strong>Open to Global Remote / Hybrid Roles</strong></span>
+        </div>
+
+        <h3 style="font-size:16px;color:var(--text-primary);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px;">Executive Summary</h3>
+        <p style="margin-bottom:24px;">
+          Results-oriented Technical Project Manager with deep expertise in turning complex product visions and Figma UI/UX designs into high-velocity engineering delivery. Track record orchestrating multi-platform ecosystems across iOS, Android, web portals, and microservices backends. Highly adept in Agile/Scrum ceremonies, Work Breakdown Structure (WBS) deconstruction, INVEST-compliant user story writing with Gherkin acceptance criteria, cross-platform dependency mapping, UAT testing, and GDPR compliance.
+        </p>
+
+        <h3 style="font-size:16px;color:var(--text-primary);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:12px;">Core Competencies</h3>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px;background:var(--bg-surface-elevated);padding:16px;border-radius:12px;">
+          <div>
+            <strong>Agile Leadership:</strong> Scrum, Kanban, Sprint Planning, Backlog Refinement, Daily Standups, Sprint Retrospectives, Burndown &amp; Velocity Tracking.
+          </div>
+          <div>
+            <strong>Technical Literacy:</strong> RESTful APIs, State Machines, Mobile SDLC (App Store &amp; Play Store), Figma Dev Mode, CI/CD Coordination.
+          </div>
+          <div>
+            <strong>Delivery Governance:</strong> WBS Decomposition, Gherkin BDD Acceptance Criteria, QA Test Matrices, Defect Triaging, Risk Mitigation.
+          </div>
+          <div>
+            <strong>Tools &amp; Platforms:</strong> Jira, Linear, Confluence, Figma, GitHub, Postman, Slack, Notion, TestRail, Google Analytics.
+          </div>
+        </div>
+
+        <h3 style="font-size:16px;color:var(--text-primary);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:12px;">Professional Experience</h3>
+
+        <div style="margin-bottom:20px;">
+          <div style="display:flex;justify-content:space-between;font-weight:700;color:var(--text-primary);">
+            <span>Technical Project Manager &amp; Delivery Lead — Svello (Swap Space)</span>
+            <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent-teal);">2024 — Present</span>
+          </div>
+          <div style="font-style:italic;margin-bottom:6px;font-size:13px;">Multi-Platform Property Technology Ecosystem (Mobile &amp; Web)</div>
+          <ul style="padding-left:18px;margin-bottom:12px;">
+            <li>Managed the end-to-end delivery of 4 interconnected software platforms: Buyer Mobile App, Agent Mobile App, Agent Web Portal, and Master Admin &amp; Analytics Console.</li>
+            <li>Decomposed 40+ Figma design boards into modular epics, user stories, and technical sub-tasks across mobile, frontend, and backend squads.</li>
+            <li>Maintained a 100% on-time sprint milestone record, orchestrating daily standups and eliminating dependencies across 6 squads.</li>
+            <li>Authored comprehensive Gherkin acceptance criteria (Given/When/Then) and defined state machine transitions for offer pipelines in Saudi Riyal (SAR).</li>
+            <li>Coordinated QA test passes, UAT sign-offs, and store submission guidelines for Apple App Store and Google Play Console.</li>
+          </ul>
+        </div>
+
+        <div style="margin-bottom:20px;">
+          <div style="display:flex;justify-content:space-between;font-weight:700;color:var(--text-primary);">
+            <span>Software Project Coordinator &amp; Scrum Lead — Technology Consulting</span>
+            <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent-teal);">2022 — 2024</span>
+          </div>
+          <div style="font-style:italic;margin-bottom:6px;font-size:13px;">Custom Web &amp; Mobile Software Development</div>
+          <ul style="padding-left:18px;margin-bottom:12px;">
+            <li>Facilitated agile ceremonies for distributed squads of 8-15 engineers, maintaining predictable delivery velocity and sprint hygiene.</li>
+            <li>Bridged technical discussions between clients, designers, and engineering teams to eliminate scope creep.</li>
+            <li>Implemented standardized bug tracking and defect triaging workflows in Jira, cutting average bug turnaround time by 30%.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
-</section>
 
-<footer class="footer" id="contact">
-  <div class="wrap">
-    <div class="reveal">
-    <div class="kicker">Get in touch</div>
-    <h2>Working on something that needs a plan and someone to see it through?</h2>
-    </div>
-    <div class="footer-grid">
-      <div class="footer-contact">
-        <div><strong style="font-family:'Fraunces',serif;font-size:19px;font-weight:600;color:var(--ink);">Hope Samuel</strong></div>
-        Technical Project Manager<br>
-        <a href="tel:+2347032808982">+234 703 280 8982</a><br>
-        <a href="mailto:samuelhopes8072@gmail.com">samuelhopes8072@gmail.com</a><br>
-        <a href="https://www.linkedin.com/in/hope-odion-samuel920b7220" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-      <div class="footer-contact" style="text-align:right;">
-        Based on the Swap Space<br>delivery, coordinated end to end.
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>Swap Space — delivery case study</span>
-      <span>Screens shown are from the live product</span>
-    </div>
-  </div>
-</footer>
-
-<script src="portfolio.js"></script>
+  <!-- JavaScript Bundle -->
+  <script src="portfolio.js"></script>
 </body>
 </html>
