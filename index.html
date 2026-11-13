@@ -8,44 +8,62 @@
 </head>
 <body>
 
-  <!-- ==================== NAVIGATION BAR ==================== -->
-  <nav class="nav" id="main-nav">
-    <div class="wrap">
-      <a href="#" class="wordmark" aria-label="Hope Samuel Home">
-        <div class="nav-avatar-wrap">
-          <img class="nav-avatar" src="./Images/IMG-20260921-WA0000.jpg" alt="Hope Samuel - Technical Project Manager">
-          <span class="nav-status-indicator" title="Open to Work"></span>
-        </div>
-        <div>
-          <span>Hope <span class="accent">Samuel</span></span>
-          <span class="wordmark-role">Technical Project Manager</span>
-        </div>
+
+<nav class="nav" id="main-nav">
+  <div class="wrap">
+
+    <!-- LEFT: Name and title -->
+    <a href="#overview" class="wordmark" aria-label="Hope Samuel Home">
+      <div>
+        <span>Hope <span class="accent">Samuel</span></span>
+        <span class="wordmark-role">Technical Project Manager</span>
+      </div>
+    </a>
+
+    <!-- MIDDLE: Navigation links -->
+    <div class="navlinks">
+      <a href="#overview">Overview</a>
+      <a href="#approach">Delivery Approach</a>
+      <a href="#buyer">Buyer App</a>
+      <a href="#agent">Agent Platform</a>
+      <a href="#admin">Admin Panel</a>
+      <a href="#artifacts">TPM Artifacts</a>
+      <a href="#competencies">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <!-- RIGHT: Buttons and profile picture -->
+    <div class="nav-actions">
+
+      <button id="theme-toggle" class="theme-toggle"
+        aria-label="Toggle Dark / Light Theme" title="Toggle theme">
+        <span id="theme-icon">☼</span>
+      </button>
+
+      <a href="#contact" class="nav-hire-btn">
+        <span>Hire Hope</span>
+        <span>→</span>
       </a>
 
-      <div class="navlinks">
-        <a href="#overview">Overview</a>
-        <a href="#methodology">Delivery Playbook</a>
-        <a href="#case-study">Case Study</a>
-        <a href="#artifacts">TPM Artifacts</a>
-        <a href="#competencies">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
+      <div class="nav-avatar-wrap">
+        <img
+          class="nav-avatar"
+          src="./Images/IMG-20260921-WA0000.jpg"
+          alt="Hope Samuel - Technical Project Manager"
+        >
+        <span class="nav-status-indicator" title="Open to Work"></span>
       </div>
 
-      <div class="nav-actions">
-        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark / Light Theme" title="Toggle theme">
-          <span id="theme-icon">☼</span>
-        </button>
-        <a href="#contact" class="nav-hire-btn">
-          <span>Hire Hope</span>
-          <span>→</span>
-        </a>
-        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
-          ☰
-        </button>
-      </div>
+      <button id="mobile-menu-btn" class="mobile-menu-btn"
+        aria-label="Toggle menu" aria-expanded="false">
+        ☰
+      </button>
+
     </div>
-  </nav>
+  </div>
+</nav>
+
+
 
   <!-- Mobile Drawer -->
   <div class="mobile-nav" id="mobile-nav">
@@ -137,7 +155,18 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> 
+
+  <div class="profile-picture-container">
+
+    <img
+        id="profile-picture"
+        src="./Images/IMG-20260921-WA0000.jpg"
+        alt="Profile Picture"
+    >
+
+
+</div>
   </header>
 
   <!-- ==================== VALUE PILLARS (WHY HIRE HOPE) ==================== -->
@@ -1573,6 +1602,16 @@
   </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="portfolio.js"></script>
+
+<!-- Profile Picture File Picker -->
+<input
+  type="file"
+  id="profile-picture-input"
+  accept="image/*"
+  hidden
+>
+
 </body>
 </html>

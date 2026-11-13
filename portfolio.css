@@ -351,15 +351,18 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   width: 44px;
   height: 44px;
+  flex-shrink: 0;
 }
 
 .nav-avatar {
+  display: block;
   width: 100%;
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--accent-teal);
   box-shadow: 0 0 10px var(--accent-teal-glow);
+  cursor: pointer;
 }
 
 .nav-status-indicator {
@@ -426,6 +429,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   gap: 16px;
+  margin-left: 30px;
 }
 
 .theme-toggle {
@@ -1957,6 +1961,16 @@ section {
   .mobile-menu-btn {
     display: flex;
   }
+
+  .nav-actions {
+    gap: 10px;
+  }
+
+.nav-avatar-wrap {
+  width: 38px;
+  height: 38px;
+}
+
   .hero {
     padding: 48px 0 40px;
   }
@@ -2052,4 +2066,31 @@ section {
     border: none !important;
     padding: 0 !important;
   }
+} 
+
+/* Profile picture style */
+
+.profile-picture-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#profile-picture {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* ---------- Mobile & Tablet Image Grid ---------- */
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
 }
