@@ -1948,8 +1948,30 @@ section {
 }
 
 @media (min-width: 1081px) {
-  .gallery-grid {
+  .gallery-grid,
+  .figma-row,
+  .filmstrip,
+  .browser-stack {
+    display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+  }
+  .figma-frame,
+  .film-item,
+  .browser-frame {
+    min-width: 0;
+  }
+  .figma-frame img,
+  .film-phone img,
+  .browser-body img {
+    width: 100%;
+    height: auto;
+  }
+  .browser-intro {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
   }
   .figma-wide-card {
     grid-column: auto;
