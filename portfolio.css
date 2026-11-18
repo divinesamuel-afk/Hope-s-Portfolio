@@ -255,10 +255,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-copy {
-  font-size: 17px;
+  font-size: 18px;
   line-height: 1.7;
   color: var(--text-secondary);
-  max-width: 64ch;
+  max-width: 72ch;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 /* ---------- Buttons ---------- */
@@ -1697,14 +1700,44 @@ section {
 }
 
 .footer-bottom {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) auto;
   justify-content: space-between;
   align-items: center;
   padding-top: 24px;
   border-top: 1px solid var(--border-subtle);
-  flex-wrap: wrap;
   gap: 16px;
   font-size: 13px;
+}
+
+.footer-bottom .back-to-top-btn {
+  justify-self: end;
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+#overview .overview-grid {
+  display: block;
+}
+
+.copy-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  margin-bottom: 28px;
+}
+
+.snap-note {
+  max-width: 72ch;
+  margin: 0 auto 24px;
+  color: var(--text-secondary);
+  font-size: 18px;
+  line-height: 1.7;
+  text-align: center;
 }
 
 .back-to-top-btn {
@@ -2044,6 +2077,20 @@ section {
   }
   .hire-card > * {
     min-width: 0;
+  }
+  .overview-grid,
+  .copy-columns {
+    grid-template-columns: 1fr;
+  }
+  .copy-columns {
+    gap: 16px;
+  }
+  .footer-bottom {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .footer-bottom .back-to-top-btn {
+    justify-self: center;
   }
   .contact-item-icon {
     flex-shrink: 0;
