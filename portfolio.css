@@ -2010,6 +2010,28 @@ section {
   .timeline-dot {
     left: -18px;
   }
+  .hire-card > * {
+    min-width: 0;
+  }
+  .contact-item-icon {
+    flex-shrink: 0;
+  }
+  .contact-item-info {
+    min-width: 0;
+  }
+  .contact-item-val {
+    overflow-wrap: anywhere;
+  }
+  .quick-form {
+    width: 100%;
+  }
+  .form-group input,
+  .form-group textarea {
+    max-width: 100%;
+  }
+  .contact-item:hover {
+    transform: none;
+  }
 }
 
 @media (max-width: 480px) {
@@ -2024,6 +2046,18 @@ section {
   }
   .quick-form {
     padding: 20px;
+  }
+  .contact-item {
+    gap: 12px;
+    padding: 12px;
+  }
+  .contact-item-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .copy-btn {
+    flex-shrink: 0;
+    padding: 8px 10px;
   }
 }
 
